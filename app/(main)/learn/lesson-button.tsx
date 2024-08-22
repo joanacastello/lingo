@@ -29,11 +29,13 @@ const LessonButton = ({
   let indentationLevel;
 
   if (cycleIndex <= 2) {
-    indentationLevel = cycleIndex;
+    if (cycleIndex === 2) { indentationLevel = cycleIndex - 0.5; }
+    else { indentationLevel = cycleIndex; }
   } else if (cycleIndex <= 4) {
     indentationLevel = 4 - cycleIndex;
   } else if (cycleIndex <= 6) {
-    indentationLevel = 4 - cycleIndex;
+    indentationLevel = 4 - cycleIndex; 
+    if (cycleIndex === 6) { indentationLevel = 4 - cycleIndex + 0.5; }
   } else {
     indentationLevel = cycleIndex - 8;
   }
